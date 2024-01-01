@@ -1,0 +1,20 @@
+@import "variable";
+nav{
+    @include md{
+        display: none;
+    };
+    @include height-width(auto,$contWidth);
+    
+    @include color-bgColor(White, #444);
+
+    ul{
+        width: $subContwidth;
+        display: flex;
+        margin: auto;
+        
+    }
+    li{
+        list-style-type: none;
+        @include margin-padding(0,0.8rem);
+    }
+}

@@ -1,0 +1,115 @@
+@import "variable";
+#subcontainer{
+    width: $subContwidth;
+    margin: $subContMargin;
+    display: flex;
+    flex-direction: row;
+    @include md{
+        width:90%;
+        margin: auto;
+    }
+}
+#padding-top-bottom{
+    padding-top: 1.25em;
+    padding-bottom: 1.25em;
+}
+footer{
+    background-color: #e9ecef;
+}
+.mainContainerThree{
+    @extend #padding-top-bottom;
+    margin-top: 20px;
+    width: $contWidth;
+    .subContainerThree{
+      @extend #subcontainer;
+      @include sm{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+      }
+        .containerthree-hr{
+            display: none;
+            @include sm{
+                display: block;
+                width: 100%;
+            }
+
+        }
+        .first{
+            @include sm{
+            width: 100%;
+                #nothing{
+                    display: none;
+                }
+                
+            }
+            font-size: .875em;
+            width: 25%;
+
+            i{
+                display: none;
+                @include sm{
+                    display: block;
+                    position: relative;
+                    float: right;
+                    
+                }  
+            }
+            p{
+                width: 90%
+            }
+        }
+        .second{
+            @extend .first;
+        }
+        .third{
+            @extend .first;
+        }
+        .fourth{
+            @extend .first;
+        }
+    }
+}
+.after-footer{
+    @include sm{
+        display: none;
+    }
+}
+.last{
+    @extend #padding-top-bottom;
+    width: $contWidth;
+   .last-main{
+        @include sm{
+            width: 90%;
+        }  
+        @extend #subcontainer;
+        @include sm{
+            width: 100%;
+            display: block;
+        }
+        
+        .last-icons{
+            @include sm{
+                margin: auto;
+                width: 90%;
+                display: flex;
+                justify-content: space-between;
+            }
+            width: 30%;
+            i{
+                font-size: 2rem;
+            }
+        }
+        .last-text{
+            width: 70%;
+            @include sm{
+                width: 90%;
+                margin: 15px;
+                font-size: small;
+
+            }
+
+        }
+    }
+    
+}

@@ -1,0 +1,559 @@
+@import "variable";
+
+.mainContainerTwo {
+    margin-top: 10px;
+}
+
+.subContainerTwo {
+    display: flex;
+    width: $subContwidth;
+    margin: auto;
+
+    @include xl {
+        width: 85%;
+    }
+
+    @include md {
+        width: 90%;
+        margin: auto;
+    }
+
+    .leftSide {
+        padding-right: 15px;
+        padding-left: 15px;
+        width: 30%;
+
+        @include md {
+            width: 0%;
+            padding-left: 0%;
+            padding-right: 0%;
+        }
+
+        .select {
+            @include md {
+                display: none;
+            }
+
+            select {
+                @include color-bdColor;
+                @include height-width(auto, 100%);
+                @include margin-padding(auto, 3%);
+            }
+        }
+
+        .resetBtn {
+            @include md {
+                display: none;
+            }
+
+            margin-top: 10px;
+
+            button {
+                @include color-bdColor;
+                border-color: #0070d2;
+                color: #0070d2;
+                @include height-width(auto, 100%);
+                @include margin-padding(auto, 3%);
+            }
+        }
+
+        .category {
+            @include md {
+                display: none;
+            }
+
+            margin-top: 10px;
+
+            p {
+                @include height-width(auto, 100%);
+                @include margin-padding(auto, 3%);
+                @include color-bdColor;
+            }
+
+            ul {
+                @include color-bdColor;
+
+                li {
+                    color: #0070d2;
+                    list-style-type: none;
+                    margin-left: 50px;
+                }
+
+                .clothing {
+                    margin-left: 65px;
+                }
+
+                .suits {
+                    margin-left: 80px;
+                }
+            }
+        }
+
+    }
+
+    .colors {
+        @include md {
+            display: none;
+        }
+
+        margin-top: 10px;
+        width: 100%;
+        @include color-bdColor;
+
+        p {
+            width: 100%;
+            @include margin-padding(auto, 3%);
+            @include color-bdColor;
+        }
+
+        ul {
+
+            padding: 15px;
+
+            .li {
+                width: 70%;
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .beige {
+                margin: 2px;
+                @include height-width(2.5em, 2.5em);
+                @include border-bradius(0.063em solid rgba(0, 0, 0, .3), 1.25em);
+                background: beige;
+                display: block;
+                position: relative;
+                @include no-style;
+            }
+
+            .black {
+                @extend .beige;
+                background: #000;
+            }
+
+            .blue {
+                @extend .beige;
+                background: #0070d2;
+            }
+
+            .navy {
+                @extend .beige;
+                @include bgC-opc(navy, .5);
+            }
+
+            .brown {
+                @extend .beige;
+                background-color: brown;
+            }
+
+            .light {
+                @extend .beige;
+                @include bgC-opc(#008827, .2);
+            }
+
+            .grey {
+                @extend .beige;
+                background-color: #8f979d;
+            }
+
+            .orange {
+                @extend .beige;
+                @include bgC-opc(orange, .2);
+            }
+
+            .pink {
+                @extend .beige;
+                background-color: #fe249a;
+
+            }
+
+            .purple {
+                @extend .beige;
+                @include bgC-opc(purple, .2);
+            }
+
+            .red {
+                @extend .beige;
+                @include bgC-opc(red, .5);
+            }
+
+            .white {
+                @extend .beige;
+                background-color: white;
+            }
+
+            .yellow {
+                @extend .beige;
+                @include bgC-opc(#ff0, .2);
+            }
+
+            .mix {
+                @extend .beige;
+                @include linearGradient;
+                background-repeat: repeat-y, repeat;
+                background-size: 50% 100%, 100% 100%;
+                transform: rotate(35deg);
+            }
+        }
+    }
+
+    .price {
+        @include md {
+            display: none;
+        }
+
+        @include color-bdColor;
+        margin-top: 10px;
+        @include height-width(auto, 100%);
+
+        p {
+            @include height-width(auto, 100%);
+            @include margin-padding(auto, 3%);
+
+        }
+
+        ul {
+            color: #0070d2;
+            @include color-bdColor;
+            @include no-style;
+            padding: 1.25rem;
+        }
+    }
+
+    .newArr {
+        @include md {
+            display: none;
+        }
+
+        @include color-bdColor;
+        margin-top: 10px;
+        @include height-width(auto, 100%);
+
+        p {
+            @include height-width(auto, 100%);
+            @include margin-padding(auto, 3%);
+        }
+
+        ul {
+            color: #0070d2;
+            @include no-style;
+            @include color-bdColor;
+            padding: 1.25rem;
+        }
+    }
+}
+
+.rightSide {
+    width: 70%;
+
+    @include md {
+        width: 100%;
+    }
+
+    .text-top {
+        @include sm {
+            height: 20vh;
+        }
+
+        @include md {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .selected {
+            @include sm {
+                margin-top: 10%;
+            }
+
+            display: none;
+
+            @include md {
+                display: block;
+
+                select {
+                    @include color-bdColor;
+                    @include margin-padding(auto, 10%);
+                }
+            }
+        }
+
+        .btn {
+            @include sm {
+                margin-top: 10%;
+            }
+
+            display: none;
+
+            @include md {
+                display: block;
+
+                button {
+                    @include color-bdColor;
+                    width: 100px;
+                    @include margin-padding(auto, 10%);
+                    @include color-bgColor(white, #6dd3fc)
+                }
+            }
+        }
+
+        @include height-width(35px, 100%);
+
+        p {
+            text-align: center;
+        }
+    }
+
+    .images-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+
+        .firstOne {
+            margin-top: 10px;
+            width: 30%;
+
+            @include md {
+                width: 33.33%;
+
+            }
+
+            @include sm {
+                width: 50%;
+            }
+
+            .img {
+                img {
+                    width: 100%;
+                    position: relative;
+                }
+
+                i {
+                    @include md {
+                        display: none;
+                    }
+
+                    @include xl {
+                        right: -140px;
+                    }
+
+                    @include color-bgColor(rgba(0, 0, 0, .7), #E7E8E9);
+                    @include border-bradius(1px solid rgb(252, 255, 255), 100px);
+                    top: -50px;
+                    right: -170px;
+                    position: relative;
+                    padding: 10px;
+                }
+            }
+
+            .tag {
+                margin-top: -30px;
+
+                @include sm {
+                    font-size: small;
+                }
+
+                @include md {
+                    margin-top: 0;
+                }
+
+                .tag-image {
+                    display: flex;
+                    align-items: normal;
+
+                    img {
+                        @include sm {
+                            font-size: small;
+                        }
+
+                        @include height-width(30px, 30px);
+                        @include border-bradius(1px solid rgb(117, 115, 115), 100px);
+                        margin: 2px
+                    }
+
+                    a {
+                        @include sm {
+                            font-size: small;
+                        }
+
+                        @include no-style;
+                        text-decoration: none;
+                        margin: 2px;
+                    }
+                }
+
+                .tag-text {
+                    p {
+                        @include sm {
+                            font-size: small;
+                        }
+
+                        color: #0070d2;
+                    }
+                }
+            }
+        }
+
+        .secondOne {
+            @extend .firstOne;
+
+            @include md {
+                width: 33.33%;
+            }
+
+            @include sm {
+                width: 50%;
+            }
+        }
+
+        .thirdOne {
+            @extend .firstOne;
+
+            @include md {
+                width: 33.33%;
+            }
+
+            @include sm {
+                width: 50%;
+            }
+        }
+
+        .fourthOne {
+            @extend .firstOne;
+
+            @include md {
+                width: 33.33%;
+            }
+
+            @include sm {
+                width: 50%;
+            }
+        }
+
+        .fifthOne {
+            @extend .firstOne;
+
+            @include md {
+                width: 33.33%;
+            }
+
+            @include sm {
+                width: 50%;
+            }
+        }
+
+        .sixthOne {
+            @extend .firstOne;
+
+            @include md {
+                width: 33.33%;
+            }
+
+            @include sm {
+                width: 50%;
+            }
+        }
+
+        .seventhOne {
+            @extend .firstOne;
+
+            @include md {
+                width: 33.33%;
+            }
+
+            @include sm {
+                width: 50%;
+            }
+        }
+
+        .eightOne {
+            @extend .firstOne;
+
+            @include md {
+                width: 33.33%;
+            }
+
+            @include sm {
+                width: 50%;
+            }
+        }
+
+        .nineOne {
+            @extend .firstOne;
+
+            @include md {
+                width: 33.33%;
+            }
+
+            @include sm {
+                width: 50%;
+            }
+        }
+
+        .tenthOne {
+            @extend .firstOne;
+
+            @include md {
+                width: 33.33%;
+            }
+
+            @include sm {
+                width: 50%;
+            }
+        }
+
+        .elevenOne {
+            @extend .firstOne;
+
+            @include md {
+                width: 33.33%;
+            }
+
+            @include sm {
+                width: 50%;
+            }
+        }
+
+        .twelthOne {
+            @extend .firstOne;
+
+            @include md {
+                width: 33.33%;
+            }
+
+            @include sm {
+                width: 50%;
+            }
+        }
+    }
+
+    .mybtn {
+
+        button {
+            @include bp(1201px) {
+                margin-left: 240px;
+            }
+
+            @include xl {
+                margin-left: 215px;
+            }
+
+            @include md {
+                margin-left: 225px;
+            }
+
+            @include sm {
+                margin-left: 10px;
+                width: 90%;
+            }
+
+            border-radius: 5px;
+            margin-top: 20px;
+            margin-left: 255px;
+            color: #0070d2;
+            border-color: #0070d2;
+            padding: 10px;
+            @include height-width(auto, 30%);
+        }
+    }
+}

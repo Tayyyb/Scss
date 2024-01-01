@@ -1,0 +1,38 @@
+    $breakpoint:(
+    "xs":0,
+    "sm":480px,
+    "md":768px,
+    "xl":1025px,
+    "El":1200px
+);
+
+@mixin xs{
+    @media(max-width: map-get($breakpoint, "xs")){
+        @content;
+    }
+}
+@mixin sm{
+    @media(max-width: map-get($breakpoint, "sm")){
+        @content;
+    }
+}    
+@mixin md{
+    @media(max-width: map-get($breakpoint, "md")){
+        @content;
+    }
+}
+@mixin xl{
+    @media(max-width: map-get($breakpoint, "xl")){
+        @content;
+    }
+}
+@mixin El{
+    @media(max-width: map-get($breakpoint, "El")){
+        @content;
+    }
+}
+@mixin bp($breakpoint: 0){
+    @media(max-width: $breakpoint){
+        @content;
+    }
+}

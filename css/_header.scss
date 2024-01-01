@@ -1,0 +1,209 @@
+        @import "variable";
+        @import "breakPoints";
+
+        header {
+            width: $contWidth;
+        }
+        .header-main {
+            width: $subContwidth;
+            margin: $subContMargin;
+            display: flex;
+            align-items: center;
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+
+        }
+
+        .header-left {
+            .menu {
+                display: none;
+
+                @include sm {
+                    span {
+                        display: none;
+                    }
+                }
+
+                @include md {
+                    display: block;
+                    font-size: 1rem;
+                }
+            }
+
+            .login-icon {
+                @include md {
+                    display: none;
+                }
+            }
+
+            @include height-width(100%, 40%);
+
+            a {
+                font-size: 1rem;
+                text-decoration: none;
+                color: black;
+            }
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            @include height-width(100%, 60%);
+
+            .logo {
+                width: 40%;
+
+                .s-logo {
+                    display: none;
+
+                    img {
+                        @include md {
+                            width: 65px;
+                        }
+                    }
+
+                    @include md {
+                        display: block;
+                        @include height-width(auto, 100%);
+
+                        img {
+                            font-size: 10px;
+                        }
+                    }
+                }
+
+                .img1 {
+                    img {
+                        @include md {
+                            display: none;
+                        }
+
+                        display: flex;
+                        align-items: center;
+                        @include height-width(auto, 100%);
+                    }
+                }
+            }
+
+            .input {
+
+                @include md {
+                    margin-left: 5%;
+
+                }
+
+                @include xl {
+                    margin-left: 8%;
+                }
+
+                width: 60%;
+                position: relative;
+                margin-left: 15%;
+
+                input {
+                    @include sm {
+                        display: none
+                    }
+
+                    @include md {
+                        display: none;
+                    }
+
+                    @include xl {
+                        @include height-width(auto, 80%);
+
+                    }
+
+                    @include El {
+                        width: 240px;
+                    }
+
+                    @include height-width(auto, 90%);
+                    padding: 2%;
+                }
+
+                .search {
+                    @include sm {
+                        display: none;
+                    }
+
+                    @include md {
+                        display: none;
+                    }
+
+                    @include xl {
+                        right: 23%;
+                        top: 24%;
+                    }
+
+                    @include El {
+                        right: 15%;
+                        top: 28%;
+                    }
+
+                    @include bp(1326px) {
+                        right: 13%;
+                        top: 28%;
+                    }
+
+                    position: absolute;
+                    right: 12%;
+                    top: 22%;
+                }
+
+                .cartIcon {
+                    @include md {
+                        position: relative;
+                        float: right;
+                    }
+
+                    @include sm {
+                        i {
+                            margin-left: 90px;
+                        }
+                    }
+
+                    margin-left: 2%;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        .imaginary {
+            display: none;
+
+            @include md {
+                display: block;
+
+                input {
+                    width: 100%;
+                    padding: 1%;
+                    position: relative;
+                }
+
+                i {
+                    position: absolute;
+                    right: 10px;
+                    top: 75px;
+
+                }
+            }
+
+            @include sm {
+                display: block;
+
+                input {
+                    width: 100%;
+                    padding: 2%;
+                    position: relative;
+                }
+
+                i {
+                    position: absolute;
+                    right: 10px;
+                    top: 75px;
+
+                }
+            }
+
+        }

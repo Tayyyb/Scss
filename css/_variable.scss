@@ -1,0 +1,40 @@
+$contWidth: 100%;
+$contHeight:11vh;
+$navbarHeight:8vh;
+$bdColor:2px solid red;
+$subContwidth: 80%;
+$subContHeight: 100%;
+$subContMargin:auto;
+$leftWidth:50%;
+
+@mixin height-width($value1, $value2){
+    height: $value1;
+    width: $value2;
+}
+ @mixin margin-padding($value1, $value2){
+    margin: $value1;
+    padding: $value2;
+ }
+@mixin color-bgColor($value1,$value2){
+    color: $value1;
+    background-color: $value2;
+}
+@mixin color-bdColor(){
+    background-color: #fff;
+    border: 1px solid #ced4da;
+}
+@mixin linearGradient(){
+    background: linear-gradient(0deg,#821e91,#821e91 25%,#edd134 0,#ff0 50%,#edd134 0,#59ba00 0,#59ba00 76%,#111 0,#111),linear-gradient(0deg,#0e5cd1,#0e5cd1 50%,#e20b0b 0,#e20b0b);
+}
+@mixin no-style{
+    list-style: none;
+    list-style-type: none;
+}
+@mixin bgC-opc($value1, $value2){
+    background: $value1;
+    opacity: $value2;
+}
+@mixin border-bradius($value1, $value2){
+    border: $value1;
+    border-radius: $value2;
+}
